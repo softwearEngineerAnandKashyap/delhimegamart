@@ -6,6 +6,8 @@ defined('BASEPATH') or die('No Direct Script Allow');
  */
 class LoginModel extends CI_Model
 {
+	protected $tbl_users = "users";
+
 	function __construct()
 	{
 		parent::__construct();
@@ -25,8 +27,8 @@ class LoginModel extends CI_Model
 			return  $insert_id;
 		}
 	public function doLogin($array){
-		$this->db->select('admin_login_id_pk,email,password,salt');
-		$this->db->from('tbl_admin_login');
+		$this->db->select('id,email,password,salt');
+		$this->db->from($this->tbl_users);
 		$this->db->where('email',$this->db->escape_str($array));
 		$query = $this->db->get();
 		if($query->num_rows() > 0):

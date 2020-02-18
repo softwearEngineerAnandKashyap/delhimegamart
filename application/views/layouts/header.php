@@ -6,22 +6,20 @@
 <!--[if IE 9 ]>    <html lang="en" class="ie9">    <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html class="no-js" lang="">
-    
+
 <!-- Mirrored from d29u17ylf1ylz9.cloudfront.net/bsale-preview/b-sale/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Feb 2020 05:29:02 GMT -->
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Brandzbix</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Brandzbix</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<?php include "style.php"; ?>
-
-    <body class="home-one">
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-               
+<?php include "style.php";?>
+<body class="home-one">
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
   <!-- HEADER AREA -->
         <div class="header-area">
         	<div class="header-top-bar">
@@ -33,15 +31,12 @@
         							<ul class="list-inline">
         								<li></li>
         								<li><i class="fa fa-phone" aria-hidden="true"></i><a href="#"> Helpline: +91 9582454379</a>
-        								
+
         								</li>
         							</ul>
         						</div>
             					<p>
-                              <?php 
-                                 if(!empty($this->session->userdata)){ ?>
-                                   Welcome &nbsp; <a href="#" style="color:#fff;" title="<?php echo $this->session->userdata['logged_in']['user_name']; ?>"><?php echo substr($this->session->userdata['logged_in']['user_name'],0,5) ?></a>
-                              <?php   } ?>
+
                           </p>
         					</div>
         				</div>
@@ -51,8 +46,8 @@
         							<li><a href="#"><i class="fa fa-user"></i>My Account</a></li>
         							<li><a href="#"><i class="fa fa-heart"></i>Wishlist</a></li>
         							<li><a href="checkout.html"><i class="fa fa-check-square-o"></i>Checkout</a></li>
-        							<li><a href="<?php echo base_url();?>login"><i class="fa fa-lock"></i>Login</a></li>
-        							<li><a href="<?php echo base_url();?>register"><i class="fa fa-pencil-square-o"></i>Register</a></li>
+        							<li><a href="<?php echo base_url(); ?>login"><i class="fa fa-lock"></i>Login</a></li>
+        							<li><a href="<?php echo base_url(); ?>register"><i class="fa fa-pencil-square-o"></i>Register</a></li>
         						</ul>
         					</div>
         				</div>
@@ -121,9 +116,9 @@
         													<p>subtotal<span>£150.00</span></p>
         													<button type="button" class="btn btn-default">Chckout</button>
         												</div>
-        											</div> 
-        										</li> 
-        									</ul> 
+        											</div>
+        										</li>
+        									</ul>
         								</li>
         								<li><a href="#">2 items</a></li>
         							</ul>
@@ -198,7 +193,7 @@
         											<li><a href="#">Sidebar Left</a></li>
         											<li><a href="#">Sidebar Right</a></li>
         											<li><a href="#">List View</a></li>
-        										</ul>	
+        										</ul>
         									</li>
         									<li><a href="#">Shop Pages</a>
         										<ul>
@@ -206,7 +201,7 @@
         											<li><a href="#">My Account</a></li>
         											<li><a href="#">Wishlist</a></li>
         											<li><a href="#">Shopping Cart</a></li>
-        										</ul>	
+        										</ul>
         									</li>
         									<li><a href="#">Product Types</a>
         										<ul>
@@ -214,7 +209,7 @@
         											<li><a href="#">Variable Product</a></li>
         											<li><a href="#">Grouped Product</a></li>
         											<li><a href="#">Downloadable</a></li>
-        										</ul>	
+        										</ul>
         									</li>
         								</ul>
         							</li>

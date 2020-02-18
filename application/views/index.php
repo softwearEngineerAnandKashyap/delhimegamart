@@ -1,6 +1,4 @@
 <?php include "layouts/header.php";
-	print_r($this->session->userdata['logged_in']);
-	die();
 ?>
 <!-- SUPPORT AREA -->
 <div class="support-area">
@@ -57,7 +55,7 @@
 <div class="slider-area">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3 col-sm-3">	
+			<div class="col-md-3 col-sm-3">
 				<div class="slider-left">
 					<h2>Today’s Offer</h2>
 					<div id="owl-slider-left" class="owl-carousel">
@@ -91,7 +89,7 @@
 							<img src="<?php echo base_url(); ?>assets/img/slider/s5.jpg" alt="main slider" title="#htmlcaption2"/>
 						</div>
 						<div id="htmlcaption1" class="nivo-html-caption slider-caption-1">
-							<div class="slider-progress"></div>									
+							<div class="slider-progress"></div>
 							<div class="slide-text">
 								<div class="middle-text">
 									<div class="cap-title wow slideInRight" data-wow-duration=".9s" data-wow-delay="0s">
@@ -100,18 +98,18 @@
 									<div class="cap-dec wow slideInRight" data-wow-duration="1.1s" data-wow-delay="0s">
 										<p>Save Up to</p>
 										<h1>37% Off</h1>
-									</div>	
+									</div>
 									<div class="cap-readmore animated bounceIn" data-wow-duration="1.5s" data-wow-delay=".5s">
 										<a href="#">View details</a>
-									</div>	
-								</div>	
+									</div>
+								</div>
 							</div>
 							<div class="slide-image">
 								<img class="wow slideInUp"  data-wow-duration="1.5s" data-wow-delay="0s" src="<?php echo base_url(); ?>assets/img/slider/si1.png" alt="slider caption" />
 							</div>
 						</div>
 						<div id="htmlcaption2" class="nivo-html-caption slider-caption-2">
-							<div class="slider-progress"></div>					
+							<div class="slider-progress"></div>
 							<div class="slide-text">
 								<div class="middle-text">
 									<div class="cap-title wow slideInRight" data-wow-duration=".9s" data-wow-delay="0s">
@@ -120,11 +118,11 @@
 									<div class="cap-dec wow slideInRight" data-wow-duration="1.1s" data-wow-delay="0s">
 										<p>Save Up to</p>
 										<h1>37% Off</h1>
-									</div>	
+									</div>
 									<div class="cap-readmore animated bounceIn" data-wow-duration="1.5s" data-wow-delay=".5s">
 										<a href="#">Shop Now</a>
-									</div>	
-								</div>	
+									</div>
+								</div>
 							</div>
 							<div class="slide-image slide2-image">
 								<img class="wow slideInUp"  data-wow-duration="1.5s" data-wow-delay="0s" src="<?php echo base_url(); ?>assets/img/slider/si3.png" alt="slider caption" />
@@ -944,4 +942,4 @@
 	</div>
 </div>
 <!-- Footer AREA -->
-<?php include "layouts/footer.php"; ?>
+<?php include "layouts/footer.php";?>
