@@ -1,4 +1,7 @@
-<?php include "layouts/header.php"; ?>
+<?php include "layouts/header.php";
+	print_r($this->session->userdata['logged_in']);
+	die();
+?>
 <!-- SUPPORT AREA -->
 <div class="support-area">
 	<div class="container">

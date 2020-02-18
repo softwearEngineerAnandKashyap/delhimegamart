@@ -37,7 +37,12 @@
         								</li>
         							</ul>
         						</div>
-        						<p>Welcome visitor!</p>
+            					<p>
+                              <?php 
+                                 if(!empty($this->session->userdata)){ ?>
+                                   Welcome &nbsp; <a href="#" style="color:#fff;" title="<?php echo $this->session->userdata['logged_in']['user_name']; ?>"><?php echo substr($this->session->userdata['logged_in']['user_name'],0,5) ?></a>
+                              <?php   } ?>
+                          </p>
         					</div>
         				</div>
         				<div class="col-md-8 col-sm-8 col-xs-12">
@@ -46,8 +51,8 @@
         							<li><a href="#"><i class="fa fa-user"></i>My Account</a></li>
         							<li><a href="#"><i class="fa fa-heart"></i>Wishlist</a></li>
         							<li><a href="checkout.html"><i class="fa fa-check-square-o"></i>Checkout</a></li>
-        							<li><a href="<?php echo base_url();?>"><i class="fa fa-lock"></i>Login</a></li>
-        							<li><a href="#"><i class="fa fa-pencil-square-o"></i>Register</a></li>
+        							<li><a href="<?php echo base_url();?>login"><i class="fa fa-lock"></i>Login</a></li>
+        							<li><a href="<?php echo base_url();?>register"><i class="fa fa-pencil-square-o"></i>Register</a></li>
         						</ul>
         					</div>
         				</div>

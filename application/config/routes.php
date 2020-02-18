@@ -56,4 +56,5 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 
+$route['register'] = 'AuthenticationController/register';
 $route['login'] = 'AuthenticationController/login';
