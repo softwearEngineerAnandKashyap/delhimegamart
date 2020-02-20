@@ -8,8 +8,7 @@
         </div>
     </div>
 </div>
-
-<?php include 'script.php'; ?>
+<?php include 'scripts.php'; ?>
 
 <?php 
 	# Remove search session data

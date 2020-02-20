@@ -17,3 +17,5 @@
 	<div id="wrapper">
 		<?php include 'navbar.php'; ?>
 	</div>
+	   <div id="wrapper">
+
