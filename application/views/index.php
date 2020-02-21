@@ -357,12 +357,13 @@
 						<h2 class="product-header">style</h2>
 						<div class="row">
 							<div id="product-slider" class="owl-carousel">
+								<?php foreach($mixProduct as $key => $value): ?>
 								<div class="col-md-4">
 									<div class="single-product">
 										<div class="single-product-img">
 											<a href="#">
-												<img class="primary-img" src="<?php echo base_url(); ?>assets/img/product/single-product-1.jpg" alt="product">
-												<img class="secondary-img" src="<?php echo base_url(); ?>assets/img/product/kids-1.jpg" alt="product">
+												<img class="primary-img" src="<?php echo base_url().'assets/img/product-image/'.$value["product_image"]; ?>" alt="product">
+											<!-- 	<img class="secondary-img" src="<?php echo base_url(); ?>assets/img/product/kids-1.jpg" alt="product"> -->
 											</a>
 											<div class="single-product-action">
 												<a href="#"><i class="fa fa-external-link"></i></a>
@@ -371,130 +372,16 @@
 										</div>
 										<div class="single-product-content">
 											<div class="product-content-left">
-												<h2><a href="#">EXCLUSIVE STYLE</a></h2>
-												<p>Jacket’s</p>
+												<h2><a href="#"><?php echo $value["product_name"]; ?></a></h2>
+												<p><?php echo $value["appreal_category"] ?></p>
 											</div>
 											<div class="product-content-right">
-												<h3>$27.00</h3>
+												<h3>&#8377; <?php echo $value["pro_price"]; ?>.00</h3>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="col-md-4">
-									<div class="single-product">
-										<div class="single-product-img">
-											<a href="#">
-												<img class="primary-img" src="<?php echo base_url(); ?>assets/img/product/single-product-2.jpg" alt="product">
-												<img class="secondary-img" src="<?php echo base_url(); ?>assets/img/product/women-2.jpg" alt="product">
-											</a>
-											<div class="single-product-action">
-												<a href="#"><i class="fa fa-external-link"></i></a>
-												<a href="#"><i class="fa fa-shopping-cart"></i></a>
-											</div>
-										</div>
-										<div class="single-product-content">
-											<div class="product-content-left">
-												<h2><a href="#">EXCLUSIVE STYLE</a></h2>
-												<p>Jacket’s</p>
-											</div>
-											<div class="product-content-right">
-												<h3>$27.00</h3>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="single-product">
-										<div class="single-product-img">
-											<a href="#">
-												<img class="primary-img" src="<?php echo base_url(); ?>assets/img/product/single-product-3.jpg" alt="product">
-												<img class="secondary-img" src="<?php echo base_url(); ?>assets/img/product/men-2.jpg" alt="product">
-											</a>
-											<div class="single-product-action">
-												<a href="#"><i class="fa fa-external-link"></i></a>
-												<a href="#"><i class="fa fa-shopping-cart"></i></a>
-											</div>
-										</div>
-										<div class="single-product-content">
-											<div class="product-content-left">
-												<h2><a href="#">EXCLUSIVE STYLE</a></h2>
-												<p>Jacket’s</p>
-											</div>
-											<div class="product-content-right">
-												<h3>$27.00</h3>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="single-product">
-										<div class="single-product-img">
-											<a href="#">
-												<img class="primary-img" src="<?php echo base_url(); ?>assets/img/product/single-product-1.jpg" alt="product">
-												<img class="secondary-img" src="<?php echo base_url(); ?>assets/img/product/kids-1.jpg" alt="product">
-											</a>
-											<div class="single-product-action">
-												<a href="#"><i class="fa fa-external-link"></i></a>
-												<a href="#"><i class="fa fa-shopping-cart"></i></a>
-											</div>
-										</div>
-										<div class="single-product-content">
-											<div class="product-content-left">
-												<h2><a href="#">EXCLUSIVE STYLE</a></h2>
-												<p>Jacket’s</p>
-											</div>
-											<div class="product-content-right">
-												<h3>$27.00</h3>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="single-product">
-										<div class="single-product-img">
-											<a href="#">
-												<img class="primary-img" src="<?php echo base_url(); ?>assets/img/product/single-product-2.jpg" alt="product">
-												<img class="secondary-img" src="<?php echo base_url(); ?>assets/img/product/women-2.jpg" alt="product">
-											</a>
-											<div class="single-product-action">
-												<a href="#"><i class="fa fa-external-link"></i></a>
-												<a href="#"><i class="fa fa-shopping-cart"></i></a>
-											</div>
-										</div>
-										<div class="single-product-content">
-											<div class="product-content-left">
-												<h2><a href="#">EXCLUSIVE STYLE</a></h2>
-												<p>Jacket’s</p>
-											</div>
-											<div class="product-content-right">
-												<h3>$27.00</h3>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="single-product">
-										<div class="single-product-img">
-											<a href="#">
-												<img class="primary-img" src="<?php echo base_url(); ?>assets/img/product/single-product-3.jpg" alt="product">
-												<img class="secondary-img" src="<?php echo base_url(); ?>assets/img/product/men-2.jpg" alt="product">
-											</a>
-											<div class="single-product-action">
-												<a href="#"><i class="fa fa-external-link"></i></a>
-												<a href="#"><i class="fa fa-shopping-cart"></i></a>
-											</div>
-										</div>
-										<div class="single-product-content">
-											<div class="product-content-left">
-												<h2><a href="#">EXCLUSIVE STYLE</a></h2>
-												<p>Jacket’s</p>
-											</div>
-											<div class="product-content-right">
-												<h3>$27.00</h3>
-											</div>
-										</div>
-									</div>
-								</div>
+							<?php endforeach; ?>
 							</div>
 						</div>
 					</div>

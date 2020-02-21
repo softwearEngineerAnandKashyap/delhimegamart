@@ -83,65 +83,30 @@ defined('BASEPATH') or exit('No Direct Script allow');
 	public function store() {
 		if(($this->session->userdata && isset($this->session->userdata['logged_in']))){
 			$data 	=	$this->input->post();
-				/*Product table Array*/
+			/*Product table Array*/
 				$dataProduct	=	array(
-					'brand_name'	=>		$data['proName'],			
-					'product_type'	=>		$data['proType'],			
-					'sku'			=>		$data['proSku'],			
-					'color'			=>		$data['proColor']			
+					'product_name'	=>		$data['proName'],			
+					'pro_sku'	=>		$data['proSku'],			
+					'pro_price'			=>		$data['proPrice'],			
+					'pro_mim_qty'			=>		$data['proQty'],			
+					'pro_code'			=>		$data['proCode'],			
+					'ideal_for_id_fk'			=>		$data['idealFor'],			
+					'appreal_cat_id_fk'			=>		$data['apprealFor'],			
+					'description'			=>		trim($data['description'])			
 				);
-				/*Store in prodcut table*/
-				$last_id = $this->ProductModel->insert($this->tbl_product,$dataProduct);
-				if($last_id > 0){
-						/*Calculate parcentage between to numbers*/
-						$lessPrice				=		$data['item_price']-$data['discount_price'];
-						$discountPrice 			=		$lessPrice/$data['item_price'];	
-						$parcentCount			=		100*$discountPrice;
-						$discountPercent		=		explode('.',$parcentCount);
 
-						/*Product Price Array*/
-						$dataPrice	=	array(
-							'product_id_fk'			=>		$last_id,			
-							'pro_price'				=>		$data['item_price'],			
-							'discount_price'		=>		$data['discount_price'],			
-							'total_discount'		=>		$discountPercent[0]			
-						);
-					/*Data insert into product price table*/
-					if($this->ProductModel->insert($this->tbl_product_price,$dataPrice) > 0){
-						/*Product Feture Data Array*/	
-						$dataFeture				=	array(
-							'product_id_fk'		=>		$last_id,			
-							'ideal_for'			=>		$data['idealFor'],			
-							'trolley_support'	=>		$data['trolleySupport'],			
-							'laptop_sleeve'		=>		$data['laptopSleeve'],			
-							'rain_cover'		=>		$data['rainCover'],			
-							'style_code'		=>		$data['styleCode'],			
-							'material'			=>		$data['material'],			
-							'water_proof'		=>		$data['waterProof'],			
-							'capacity'			=>		$data['capacity'],			
-							'dimension'			=>		$data['dimension'],			
-							'weight'			=>		$data['weight'],			
-							'description'		=>		$data['description']			
-						);
-						/*Store Data into tbl_product_price */
-						if($this->ProductModel->insert($this->tbl_product_feature,$dataFeture) > 0){
-							$response 	=	array(
-								"error"		=>	"success",
-								"message"	=>	"Product listed succssfully."
-							);
-							$this->session->set_flashdata('message', $response);
-                 			$this->session->set_flashdata('alert-class', 'alert-success');
-                			redirect(base_url() . "product/listing");
-						}
-					}
-				}
-				$response 	=	array(
-					"error"		=>	"faild",
-					"message"	=>	"Something went wrong."
-				);
-				$this->session->set_flashdata('message', $response);
- 				$this->session->set_flashdata('alert-class', 'alert-danger');
-				redirect(base_url() . "product/listing");
+				$lastId	=	$this->ProductModel->insert('tbl_product',$dataProduct);
+				 	$getImgExtn     	=   explode('.',$_FILES["proImage"]["name"]);
+				    $fileImgAdd     =    random_string('alnum',20).'.'.$getImgExtn[1];
+		            $target         =   "assets/img/product-image/".$fileImgAdd;
+		        	if(move_uploaded_file($_FILES["proImage"]["tmp_name"],$target) == true){
+		        		$proImage 	= 	array(
+		        			"product_id_fk"		=>	$lastId,
+		        			"product_image"		=>	$fileImgAdd
+		        		);
+		        		$this->ProductModel->insert('product_image',$proImage);
+		        	}
+
 		}else{
 			redirect(base_url().'admin');
 		}
@@ -159,7 +124,9 @@ defined('BASEPATH') or exit('No Direct Script allow');
 			redirect(base_url().'admin');
 		}
 	}
-
+	/*
+		
+	*/
 	/**
 	 * Show the form for editing the specified resource.
 	 *

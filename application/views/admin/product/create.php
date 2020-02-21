@@ -58,12 +58,19 @@
                                              <input type="text" class="form-control" name="proSku" placeholder="Ex: Baba3594" data-parsley-required data-parsley-error-message="This felid is required.">
                                           </div>
                                        </div>
-                                        <div class="col-lg-4 col-md-4">
+                                        <div class="col-lg-2 col-md-2">
                                           <div class="form-group">
                                              <label>Price
                                              <span class="mindetory">*</span>
                                              </label>
                                              <input type="text" class="form-control" name="proPrice" placeholder="Ex: 450" data-parsley-required data-parsley-error-message="This felid is required.">
+                                          </div>
+                                       </div>  <div class="col-lg-2 col-md-2">
+                                          <div class="form-group">
+                                             <label>Color
+                                             <span class="mindetory">*</span>
+                                             </label>
+                                             <input type="text" class="form-control" name="proColor" placeholder="Ex: 450" data-parsley-required data-parsley-error-message="This felid is required.">
                                           </div>
                                        </div>
                                        <div class="col-lg-3 col-md-3">
@@ -106,7 +113,7 @@
                                              <label>Appreal Category
                                              <span class="mindetory">*</span>
                                              </label>
-                                            <select name="idealFor" id="" class="form-control">
+                                            <select name="apprealFor" id="" class="form-control">
                                                <option value="">--Please Select--</option>
                                                 <?php
                                                    $this->db->select('appreal_cat_id_pk,appreal_category');
@@ -116,7 +123,6 @@
                                                    foreach ($result as $key => $appreal) { ?>
                                                       <option value="<?php echo $appreal["appreal_cat_id_pk"] ?>"><?php echo $appreal["appreal_category"]; ?></option>
                                                    <?php } ?>
-                                                
                                             </select>
                                           
                                           </div>
@@ -131,6 +137,14 @@
                                                 1. casual round neck full sleeve maroon solid cotton top. <br>
                                                 2. We are provided branded stock lot ( export surplus products in  Wholesale for retailers & shop kippers   (Buying and Selling). all products           international  quality standard all products is uk,Europe, u.s. flag ship company original products in stock lots quality 100% checked
                                             </small>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                          <div class="col-lg-6 col-md-6">
+                                          <div class="form-group">
+                                             <label for="description">Image</label>
+                                             <input type="file" name="proImage" class="form-control">
                                           </div>
                                        </div>
                                     </div>
