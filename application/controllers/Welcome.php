@@ -10,6 +10,9 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$data["mixProduct"]		=	$this->ProductModel->getProductMix();
+		$data["getMenCollection"]		=	$this->ProductModel->getMenCollection();
+		$data["getMomenCollection"]		=	$this->ProductModel->getMomenCollection();
+		$data["getKidsCollection"]		=	$this->ProductModel->getKidsCollection();
 		$this->load->view('index',$data);
 	}
 }

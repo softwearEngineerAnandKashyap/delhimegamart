@@ -66,3 +66,7 @@ $route['admin/dashboard']	=	"admin/dashboardController/index";
 /*Product Routes*/
 $route['admin/product/listing']	=	"admin/ProductController/index";
 $route['admin/product/create']	=	"admin/ProductController/create";
+
+/*Product controller routes*/
+
+
